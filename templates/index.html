@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Спорт To-Do</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🏋️ Спорт To-Do</h1>
+
+        <form action="/add" method="post" class="add-form">
+            <input type="text" name="task" placeholder="Что делаем сегодня?" required autofocus>
+            <button type="submit">Добавить</button>
+        </form>
+
+        <ul class="task-list">
+            {% for task in tasks %}
+            <li class="{% if task.done %}done{% endif %}">
+                <a href="/toggle/{{ task.id }}" class="toggle">
+                    {% if task.done %}✅{% else %}⬜{% endif %}
+                </a>
+                <span>{{ task.text }}</span>
+                <a href="/delete/{{ task.id }}" class="delete">❌</a>
+            </li>
+            {% else %}
+            <li class="empty">Пока задач нет</li>
+            {% endfor %}
+        </ul>
+
+        <div class="meme">
+            <p>«{{ meme.text }}»</p>
+            <small>— {{ meme.author }}</small>
+        </div>
+    </div>
+</body>
+</html>

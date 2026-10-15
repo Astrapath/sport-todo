@@ -1,0 +1,100 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.add-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-form input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.add-form button {
+    padding: 12px 20px;
+    background: #667eea;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-form button:hover {
+    background: #5568d3;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.task-list li.done span {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.toggle, .delete {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.delete {
+    margin-left: auto;
+}
+
+.empty {
+    color: #888;
+    justify-content: center;
+}
+
+.meme {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9ff;
+    border-left: 5px solid #667eea;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.meme p {
+    font-size: 20px;
+    margin: 0 0 8px;
+    color: #333;
+}
+
+.meme small {
+    color: #888;
+}
